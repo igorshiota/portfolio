@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -40,14 +41,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #050a0e;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #0C1821;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -55,16 +56,16 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/portrait.jpg");
+      background: url("../img/igor.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #53A2BE; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #53A2BE; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,47 +77,95 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #53A2BE; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */ }
+
+/* Modal Content */
+.modal-content {
+  background-color: #0C1821;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #f2f2f2; }
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
 
 * {
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #0C1821;
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Bebas Neue', cursive;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/home-bg.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(12, 24, 33, 0.9); }
+  body p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6px; }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: 0.3rem; }
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 3.5rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    padding: 0.2rem;
+    background: rgba(15, 29, 40, 0.5); }
 
 a {
   color: #fff;
@@ -128,7 +177,8 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #53A2BE;
+  letter-spacing: 0.1rem; }
 
 main {
   padding: 4rem;
@@ -138,12 +188,12 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #53A2BE;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
-      margin-top: 20vh; }
+      margin-top: 0vh; }
 
 .about-info {
   display: grid;
@@ -154,10 +204,10 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #eece1a 2px solid; }
+    border: #53A2BE 2px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -165,23 +215,105 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #132634;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #53A2BE 5px solid; }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px; }
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 0.7rem;
+  margin-top: 2rem; }
   .projects img {
-    width: 100%; }
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #53A2BE;
+      transition: all 0.5s ease-out; }
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.boxes {
+  margin-top: 1rem; }
+  .boxes div {
+    width: 18em;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.8rem 1.5rem;
+      background: #53A2BE;
+      color: #0C1821; }
+      .boxes div:hover span {
+        color: #0C1821; }
+      .boxes div:hover i {
+        color: #0C1821; }
+
+.form {
+  width: 40%;
+  font-size: 1.5rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-left: 3em; }
+  .form ::placeholder {
+    font-family: "Segoe UI";
+    font-weight: 600; }
+  .form fieldset {
+    border: none; }
+  .form input {
+    width: 100%;
+    padding: .5rem;
+    height: 3em; }
+  .form textarea {
+    width: 100%;
+    padding: .5rem;
+    height: 10em; }
+  .form button {
+    width: 100%;
+    font-weight: 600; }
+  .form h4 {
+    letter-spacing: 0.1rem; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #53A2BE;
+    color: set-text-color #53A2BE; }
+
+.btn-dark {
+  background: black;
+  color: #fff;
+  letter-spacing: .1rem; }
+
+.btn-light {
+  background: #659dc7;
+  color: #111;
+  letter-spacing: .1rem; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
+  background: black;
   color: #fff;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -190,29 +322,34 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .boxes div {
+    width: 100%;
+    font-size: 1.5rem; }
+  .form {
+    width: 100%;
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin: 0; }
+    .form ::placeholder {
+      font-family: "Segoe UI";
+      font-weight: 600; }
+    .form fieldset {
+      border: none;
+      margin: 0;
+      padding: 0.5rem; } }

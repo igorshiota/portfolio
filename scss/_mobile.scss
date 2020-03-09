@@ -8,7 +8,7 @@
 // Desktops
 @include mediaLg {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -24,33 +24,33 @@
     }
   }
 
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
+  // ul.menu-nav,
+  // div.menu-branding {
+  //   float: none;
+  //   width: 100%;
+  //   min-height: 0;
 
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
-  }
+  //   &.show {
+  //     transform: translate3d(0, 0, 0);
+  //   }
+  // }
 
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
+  // .menu-nav {
+  //   height: 75vh;
+  //   transform: translate3d(-100%, 0, 0);
+  //   font-size: 24px;
+  // }
 
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0);
+  // .menu-branding {
+  //   height: 25vh;
+  //   transform: translate3d(100%, 0, 0);
 
-    .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px;
-    }
-  }
+  //   .portrait {
+  //     background: url("../img/igor_small.jpg");
+  //     width: 150px;
+  //     height: 150px;
+  //   }
+  // }
 
   .about-info {
     grid-template-areas:
@@ -77,4 +77,40 @@
   .projects {
     grid-template-columns: 1fr;
   }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .boxes {
+  
+  div {
+    width: 100%;
+    font-size: 1.5rem;
+
+  }
 }
+
+  .form {
+    width: 100%;
+    font-size: 1.5rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin: 0;
+
+
+    ::placeholder {
+      font-family: "Segoe UI";
+      font-weight: 600;
+    }
+    fieldset {
+      border: none;
+      margin: 0;
+      padding: 0.5rem;
+
+    }
+  }
+}
+

@@ -1,5 +1,8 @@
 @import "config";
 @import "menu";
+@import "modal";
+
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 
 * {
   box-sizing: border-box;
@@ -11,8 +14,14 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Bebas Neue', cursive;
   line-height: 1.5;
+
+  p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.6px;
+  }
 }
 
 // Headings
@@ -22,14 +31,15 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
+  letter-spacing: 0.3rem;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 3.5rem;
   }
 
   &.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    
+    padding: 0.2rem;
     background: rgba(lighten($primary-color, 2), 0.5);
   }
 }
@@ -47,6 +57,7 @@ header {
 
 .text-secondary {
   color: $secondary-color;
+  letter-spacing: 0.1rem;
 }
 
 main {
@@ -70,7 +81,7 @@ main {
   &#home {
     overflow: hidden;
     h1 {
-      margin-top: 20vh;
+      margin-top: 0vh;
     }
   }
 }
@@ -92,7 +103,7 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .job-1 {
@@ -114,11 +125,18 @@ main {
   }
 }
 
+// "Read more toggle button in the About page"
+
+// #hidden-text {
+//   display: none;
+// }
+
 // Work/Projects Page
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 2fr);
   grid-gap: 0.7rem;
+  margin-top: 2rem;
 
   img {
     width: 100%;
@@ -133,28 +151,71 @@ main {
 }
 
 // Contact Page
-.boxes {
+
+.contact {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.boxes {
   margin-top: 1rem;
 
   div {
-    font-size: 2rem;
+    width: 18em;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     @include easeOut;
 
     &:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 0.8rem 1.5rem;
       background: $secondary-color;
-      color: set-text-color($secondary-color);
+      color: $primary-color;
       span {
-        color: set-text-color($secondary-color);
+        color: $primary-color;
+      }
+      i {
+        color: $primary-color;
       }
     }
+  }
+}
+
+.form {
+  width: 40%;
+  font-size: 1.5rem;
+  border: 3px #fff solid;
+  padding: 1.5rem 2.5rem;
+  margin-left: 3em;
+
+
+  ::placeholder {
+    font-family: "Segoe UI";
+    font-weight: 600;
+  }
+  fieldset {
+    border: none;
+  }
+  input {
+    width: 100%;
+    padding:.5rem;
+    height: 3em;
+  }
+  textarea {
+    width: 100%;
+    padding:.5rem;
+    height: 10em;
+  }
+
+  button {
+    width: 100%;
+    font-weight: 600;
+  }
+
+  h4 {
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -175,12 +236,14 @@ main {
   @extend .btn;
   background: darken($primary-color, 50);
   color: #fff;
+  letter-spacing: .1rem;
 }
 
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
-  color: #333;
+  color: #111;
+  letter-spacing: .1rem;
 }
 
 #main-footer {
