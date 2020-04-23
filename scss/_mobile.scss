@@ -1,14 +1,21 @@
 // Widescreens
 @include mediaXl {
-  .projects {
+  .projects, .projects-modal-mobile {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projects-modal {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 // Desktops
 @include mediaLg {
-  .projects {
+  .projects, .projects-modal-mobile {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .projects-modal {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

@@ -219,18 +219,42 @@ main {
     padding: 0.5rem;
     border-bottom: #53A2BE 5px solid; }
 
-.projects {
+.projects, .projects-modal-mobile {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
   grid-gap: 0.7rem;
   margin-top: 2rem; }
-  .projects img {
+  .projects img, .projects-modal-mobile img {
     width: 100%;
     border: 3px #fff solid; }
-    .projects img:hover {
+    .projects img:hover, .projects-modal-mobile img:hover {
       opacity: 0.5;
       border-color: #53A2BE;
       transition: all 0.5s ease-out; }
+  .projects figure, .projects-modal-mobile figure {
+    margin: 1em; }
+  .projects figcaption, .projects-modal-mobile figcaption {
+    text-align: center; }
+
+.projects-modal {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-gap: 0.7rem;
+  margin-top: 2rem; }
+  .projects-modal img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects-modal img:hover {
+      opacity: 0.5;
+      border-color: #53A2BE;
+      transition: all 0.5s ease-out; }
+  .projects-modal figure {
+    margin: 0em; }
+  .projects-modal figcaption {
+    text-align: center; }
+
+.projects-modal-mobile img {
+  border: none; }
 
 .contact {
   display: flex;
@@ -308,12 +332,16 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+  .projects, .projects-modal-mobile {
+    grid-template-columns: repeat(4, 1fr); }
+  .projects-modal {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+  .projects, .projects-modal-mobile {
+    grid-template-columns: repeat(4, 1fr); }
+  .projects-modal {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {

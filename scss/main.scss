@@ -126,7 +126,7 @@ main {
 }
 
 // Work/Projects Page
-.projects {
+.projects, .projects-modal-mobile {
   display: grid;
   grid-template-columns: repeat(4, 2fr);
   grid-gap: 0.7rem;
@@ -141,6 +141,47 @@ main {
       border-color: $secondary-color;
       @include easeOut;
     }
+  }
+
+  figure {
+    margin: 1em;
+  }
+  figcaption {
+    text-align: center;
+  }
+}
+
+// Projects in the Modal
+
+.projects-modal {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-gap: 0.7rem;
+  margin-top: 2rem;
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+
+  figure {
+    margin: 0em;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+}
+
+.projects-modal-mobile {
+  img {
+    border: none;
   }
 }
 
