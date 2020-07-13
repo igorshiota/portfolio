@@ -41,14 +41,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #050a0e;
+    background: #2b1e22;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #0C1821;
+    background: #3a292e;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -58,14 +58,14 @@
       height: 250px;
       background: url("../img/igor.jpg");
       border-radius: 50%;
-      border: solid 3px #53A2BE; }
+      border: solid 3px #db9a64; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #53A2BE; }
+      color: #db9a64; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -77,7 +77,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #53A2BE; }
+      color: #db9a64; }
 
 /* The Modal (background) */
 .modal {
@@ -104,7 +104,7 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #0C1821;
+  background-color: #3a292e;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -128,7 +128,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #0C1821;
+  background: #3a292e;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -146,7 +146,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(12, 24, 33, 0.9); }
+      background: rgba(58, 41, 46, 0.9); }
   body p {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.6px; }
@@ -165,7 +165,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     padding: 0.2rem;
-    background: rgba(15, 29, 40, 0.5); }
+    background: rgba(64, 45, 51, 0.5); }
 
 a {
   color: #fff;
@@ -177,10 +177,12 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #53A2BE;
+  color: #db9a64;
   letter-spacing: 0.1rem; }
 
 main {
+  align-items: center;
+  text-align: center;
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
@@ -188,7 +190,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #53A2BE;
+        color: #db9a64;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -198,13 +200,13 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #53A2BE 2px solid; }
+    border: #db9a64 2px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.2rem; }
@@ -215,9 +217,9 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #132634;
+    background: #49343a;
     padding: 0.5rem;
-    border-bottom: #53A2BE 5px solid; }
+    border-bottom: #db9a64 5px solid; }
 
 .projects, .projects-modal-mobile {
   display: grid;
@@ -229,7 +231,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover, .projects-modal-mobile img:hover {
       opacity: 0.5;
-      border-color: #53A2BE;
+      border-color: #db9a64;
       transition: all 0.5s ease-out; }
   .projects figure, .projects-modal-mobile figure {
     margin: 1em; }
@@ -246,7 +248,7 @@ main {
     border: 3px #fff solid; }
     .projects-modal img:hover {
       opacity: 0.5;
-      border-color: #53A2BE;
+      border-color: #db9a64;
       transition: all 0.5s ease-out; }
   .projects-modal figure {
     margin: 0em; }
@@ -273,12 +275,12 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.8rem 1.5rem;
-      background: #53A2BE;
-      color: #0C1821; }
+      background: #db9a64;
+      color: #3a292e; }
       .boxes div:hover span {
-        color: #0C1821; }
+        color: #3a292e; }
       .boxes div:hover i {
-        color: #0C1821; }
+        color: #3a292e; }
 
 .form {
   width: 40%;
@@ -311,8 +313,8 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #53A2BE;
-    color: set-text-color #53A2BE; }
+    background: #db9a64;
+    color: set-text-color #db9a64; }
 
 .btn-dark {
   background: black;
@@ -320,18 +322,22 @@ main {
   letter-spacing: .1rem; }
 
 .btn-light {
-  background: #659dc7;
+  background: #bea4ab;
   color: #111;
   letter-spacing: .1rem; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: black;
+  background: #1c1416;
   color: #fff;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
+  .main-info p {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.7em 0; }
   .projects, .projects-modal-mobile {
     grid-template-columns: repeat(4, 1fr); }
   .projects-modal {
@@ -344,21 +350,18 @@ main {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
-    margin-top: 10vh; }
+    margin-top: 5vh; }
   .projects {
     grid-template-columns: 1fr; }
   .contact {
